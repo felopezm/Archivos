@@ -1,0 +1,14 @@
+{
+  "name": "archivos",
+  "version": "1.0.0",
+  "description": "Archivos en NodeJs, CRUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "felopezm",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^13.2.4"
+  }
+}
