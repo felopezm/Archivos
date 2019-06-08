@@ -28,6 +28,14 @@ switch (comando) {
         funciones.promedio_ganan();
         break;
 
+    case 'actualizar':
+        funciones.actualizar_nota(argv.nombre,argv.asignatura,argv.calificacion);
+        break;
+
+    case 'eliminar':
+        funciones.eliminar_estudiante(argv.nombre);
+        break;
+
     default:
     console.log('Debes agregar un comando correcto');
         break;

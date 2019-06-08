@@ -104,11 +104,38 @@ const promedio_ganan = () =>{
     }
 }
 
+const actualizar_nota = (nombre,asignatura,calificacion) =>{
+    listar_estudiantes();
+    let estudiante = estudiantes.find(actualizar => nombre == actualizar.nombre);
+    if(estudiante){
+        estudiante[asignatura] = calificacion;
+        guardar_estudiante();
+    }else{
+        console.log('El estudiante no existe');
+        
+    }
+}
+
+const eliminar_estudiante = (nombre) =>{
+    listar_estudiantes();
+    let nuevos_estudiante = estudiantes.filter(eliminar => nombre != eliminar.nombre);
+    if(nuevos_estudiante.length == estudiantes.length){
+        console.log('Ningún estudiante tiene el nombre a eliminar');
+    }else{
+        estudiantes = nuevos_estudiante;
+        guardar_estudiante();
+        console.log('El estudiante eliminado correctamente');
+        
+    }
+}
+
 module.exports = {
     create_estudiante,
     mostrar_estudiantes,
     mostrar_estudiante,
     mostrar_matematicas,
     promedio_estudiante,
-    promedio_ganan
+    promedio_ganan,
+    actualizar_nota,
+    eliminar_estudiante
 }
